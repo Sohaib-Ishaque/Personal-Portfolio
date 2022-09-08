@@ -58,6 +58,9 @@ body{
   border: 6px solid transparent;
   background-clip: content-box;
 }
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-black-900);
+}
 p::selection {
   background: var(--Service-Icon-color);
   color: black;

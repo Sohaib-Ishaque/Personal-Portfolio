@@ -16,7 +16,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<title>Sohaib Ishaque | Software Engineer</title>
 </head>
-<body>
+<body onload="preLoader()">
+	<div class="loader" id="preloader">
+	    <div class="line"></div>
+	    <div class="line"></div>
+	    <div class="line"></div>
+	    <div class="line"></div>
+	    <div class="line"></div>
+	    <div class="line"></div>
+	    <div class="line"></div>
+	    <div class="line"></div>
+	    <div class="line"></div>
+	</div>
 	<header class="header">
 		<div class="container">
 			<div class="row justify-content-between">
@@ -1210,6 +1221,15 @@
 	<div class="top-btn">
 		<a href="#" class="top"><i class="fa fa-arrow-circle-up"></i></a>
 	</div>
+	<script type="text/javascript">
+		var preloader = document.getElementById('preloader');
+		function preLoader(){
+			setInterval(() => {
+			  preloader.style.display = 'none';
+			}, 2000);
+			
+		}
+	</script>
 	<script src="JS/slider.js"></script>
 	<script src="JS/script.js"></script>
 	<script src="JS/dark-mode.js"></script>

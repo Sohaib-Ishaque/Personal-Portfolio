@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="CSS/style.css">
 	<link rel="stylesheet" href="CSS/responsiv.css">
 	<link rel="stylesheet" href="CSS/all.css">
+  	<link rel="stylesheet" type="text/css" href="JS/Alerts/sweetalert.css">
 	<link rel="icon" href="Images/home.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1101,25 +1102,25 @@
 			</div>
 			<div class="row">
 				<div class="contact-form">
-					<form  role="form" id="my-form">
+					<form id="my-form" method="post" action="mail.php">
 						<div class="row">
 							<div class="w-50">
 								<div class="input-group outer-shadow hover-in-shadow">
-									<input type="text" placeholder="First Name" class="input-controls" id="fname" required>
+									<input type="text" placeholder="First Name" class="input-controls" name="fname" id="fname" required>
 								</div>
 								<div class="input-group outer-shadow hover-in-shadow">
-									<input type="text" placeholder="Last Name" class="input-controls" id="lname" required>
+									<input type="text" placeholder="Last Name" class="input-controls" name="lname" id="lname" required>
 								</div>
 								<div class="input-group outer-shadow hover-in-shadow">
-									<input type="email" placeholder="Email Address" class="input-controls" id="email" required>
+									<input type="email" placeholder="Email Address" class="input-controls" name="email" id="email" required>
 								</div>
 								<div class="input-group outer-shadow hover-in-shadow">
-									<input type="text" placeholder="Your Subject" class="input-controls" id="subject" required>
+									<input type="text" placeholder="Your Subject" class="input-controls" name="subject" id="subject" required>
 								</div>
 							</div>
 							<div class="w-50">
 								<div class="input-group outer-shadow hover-in-shadow">
-									<textarea placeholder="Your Message...." cols="30" rows="10" class="input-control" required id="message"></textarea>
+									<textarea placeholder="Your Message...." cols="30" rows="10" class="input-control" name="message" required id="message"></textarea>
 								</div>
 							</div>
 						</div>
@@ -1130,7 +1131,8 @@
 						</div>
 					</form>
 				</div>
-				<div id="status"></div>
+				<p>
+				<div id="success"></div>
 			</div>
 		</div>
 	</section>
@@ -1226,7 +1228,7 @@
 		function preLoader(){
 			setInterval(() => {
 			  preloader.style.display = 'none';
-			}, 1000);
+			}, 2000);
 			
 		}
 	</script>
@@ -1235,5 +1237,7 @@
 	<script src="JS/dark-mode.js"></script>
 	<script src="Js/email.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script  src="JS/Alerts/sweetalert.js"></script>
+	<script  src="JS/Alerts/sweetalert.min.js"></script>
 </body>
 </html>

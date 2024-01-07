@@ -1593,6 +1593,7 @@ img {
 .testimonials-section .item-wrapper{
 	display: flex;
 	gap: 1rem;
+	overflow: hidden;
 }
 .testimonials-section .item-wrapper .items{
     border-radius: 10px;
@@ -1917,4 +1918,8 @@ a{
 		transform: translateY(10px);
 		transition: 0.5s;
 	}
+	.testimonials-section .slick-slider button.slick-arrow{
+		display: none !important;
+	}
+		
 }

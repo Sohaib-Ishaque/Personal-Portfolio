@@ -74,9 +74,17 @@ function bodyScrollingToggle()
           projectDetailBtn = popUp.querySelector(".pp-project-details-btn");
           let itemIndex,slideIndex,screeshot;
           filterContainer.addEventListener("click", (event)=>{
-              if(event.target.classList.contains("filter-items") && !event.target.classList.contains("active")){
+            
+              if(event.target.classList.contains("filter-items") && !event.target.classList.contains("active"))
+              {
                 filterContainer.querySelector(".active").classList.remove("outer-shadow","active");
+                filterContainer.querySelector(".visible").classList.remove("outer-shadow","visible");
                 event.target.classList.add("active","outer-shadow");
+                if(event.target.classList.contains("active","outer-shadow")){
+                    var count = event.target.querySelector('.count');
+                    count.classList.add("visible","outer-shadow");
+                }
+
                 const trgt = event.target.getAttribute("data-target");
 
                 portfolioItems.forEach((item) =>{
@@ -132,6 +140,7 @@ function bodyScrollingToggle()
               popUp.classList.toggle("open");
               bodyScrollingToggle();
           }
+          
           function poUpSlideShow()
           {
               const imgScreenshots = screeshot[slideIndex];
@@ -142,6 +151,7 @@ function bodyScrollingToggle()
                 popUp.querySelector(".pp-img-loader").classList.remove("active");
               }
               popUp.querySelector(".img-counter").innerHTML = (slideIndex+1) + " of " + screeshot.length;
+              popUp.querySelector(".img-loader").classList.remove("active");
           }
           function popUpDetails()
           {
@@ -159,6 +169,7 @@ function bodyScrollingToggle()
               popUp.querySelector(".pp-project-details").innerHTML = projectDetails;
           }
           nextBtn.addEventListener("click",() =>{
+              popUp.querySelector(".img-loader").classList.add("active");
               if(slideIndex === screeshot.length-1)
               {
                   slideIndex = 0;
@@ -171,6 +182,7 @@ function bodyScrollingToggle()
           })
 
           preBtn.addEventListener("click",() =>{    
+            popUp.querySelector(".img-loader").classList.add("active");
             if(slideIndex === 0)
             {
                 slideIndex = screeshot.length-1;
@@ -224,14 +236,14 @@ $('.item-wrapper').slick({
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 550,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

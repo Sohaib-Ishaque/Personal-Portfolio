@@ -56,9 +56,17 @@ function bodyScrollingToggle()
           projectDetailBtn = popUp.querySelector(".pp-project-details-btn");
           let itemIndex,slideIndex,screeshot;
           filterContainer.addEventListener("click", (event)=>{
-              if(event.target.classList.contains("filter-items") && !event.target.classList.contains("active")){
+            
+              if(event.target.classList.contains("filter-items") && !event.target.classList.contains("active"))
+              {
                 filterContainer.querySelector(".active").classList.remove("outer-shadow","active");
+                filterContainer.querySelector(".visible").classList.remove("outer-shadow","visible");
                 event.target.classList.add("active","outer-shadow");
+                if(event.target.classList.contains("active","outer-shadow")){
+                    var count = event.target.querySelector('.count');
+                    count.classList.add("visible","outer-shadow");
+                }
+
                 const trgt = event.target.getAttribute("data-target");
 
                 portfolioItems.forEach((item) =>{

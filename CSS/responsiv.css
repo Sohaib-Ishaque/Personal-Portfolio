@@ -86,6 +86,11 @@
     .testinomials-section{
         min-height: 50vh;
     }
+    
+    .about-section .container .row .skills .row,
+    .about-section .container .row .others .row{
+        margin: 0 1rem;
+    }
     .about-section .skills .skill-item,
     .about-section .others .skill-item{
         padding-left: 20px;
@@ -188,6 +193,12 @@
         height: 80px;
         top: 2rem;
     }
+    .testimonials-section .slick-slider button.slick-arrow {
+        display: none !important;
+    }
+    .list.active .link .icons {
+        font-size: .8em;
+    }
 }
 
 @media(max-width: 574px){
@@ -231,6 +242,13 @@
     }
     .blogs-section .blog-item-inner .postbyname p span{
         font-size: 10px;
+    }
+    .services-section,
+    .portfolio-section,
+    .contact-section,
+    .blogs-section,
+    .testimonials-section{
+        padding: 20px 0 20px;
     }
 }
 @media(max-width: 474px){
@@ -281,7 +299,7 @@
         font-size: 16px;
     }
     #footer .socials-media ul li a i {
-      line-height: 30px;
+      line-height: 37px;
     }
     .about-section .about-img .social-links a {
         height: 40px;

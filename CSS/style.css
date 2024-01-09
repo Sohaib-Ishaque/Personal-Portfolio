@@ -746,16 +746,39 @@ img{
 }
 .portfolio-section .filter-items{
 	display: inline-block;
-	margin: 0 5px 10px;
+	margin: 10px 15px 10px;
 	font-family: 'Poppins', sans-serif;
 	cursor: pointer;
 	padding: 5px 10px;
 	border-radius: 30px;
+	/* border-top-right-radius: 0; */
 	font-size: 18px;
 	font-weight: 600;
 	color: var(--text-black-700);
 	transition: all 0.3s ease;
+	position: relative;
+	z-index: 1;
 }	
+.portfolio-section .filter-items .count{
+	position: absolute;
+	right: -1.6rem;
+	top: -1.6rem;
+	border-radius: 30px;
+	/* border-bottom-left-radius: 0; */
+	width: 30px;
+	height: 30px;
+	font-size: 12px;
+	font-weight: 900;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	opacity: 0;
+	z-index: -1;
+}
+.portfolio-section .filter-items .count.visible{
+	opacity: 1;
+}
 
 .portfolio-section .portfolio-filter .filter-items:hover:not(.active){
 	opacity: 0.6;
@@ -969,7 +992,7 @@ img{
 .portfolio-popup .info a{
 	font-size: 14px;
 	color: var(--text-black-600);
-	text-transform: capitalize;
+	text-transform: lowercase;
 	font-weight: 500;
 	color: var(--skin-color);
 	cursor: pointer;
@@ -1010,7 +1033,43 @@ img{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 }
+.portfolio-popup .img-loader {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: var(--progress-color);
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 99999;
+	display: none;
+  }
+  .portfolio-popup .img-loader.active{
+	display: block;
+  }
+  .portfolio-popup .img-loader:before,
+  .portfolio-popup .img-loader:after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	inset: 0;
+	background: var(--skin-color);
+	transform: rotate(0deg) translate(30px);
+	animation: rotate 1s ease infinite;
+  }
+  .portfolio-popup .img-loader:after {
+	animation-delay: 0.5s
+  }
+  @keyframes rotate {
+	100% {
+	  transform: rotate(360deg) translate(30px)
+	}
+  }
+	  
+
+
 .portfolio-popup .pp-main-inner{
 	padding: 70px 0 50px;
 	position: relative;
@@ -1075,11 +1134,12 @@ img{
 	top: 50%;
 	width: 40px;
 	height: 40px;
+	border-radius: 50%;
 	text-align: center;
 	font-size: 25px;
 	cursor: pointer;
 	color: var(--skin-color);
-	transition: all 0.3s ease;
+	transition: all 0.5s ease;
 	z-index: 1010;
 	opacity: 0.7;
 }
@@ -1088,6 +1148,7 @@ img{
 }
 .portfolio-popup .pp-prev:hover ,.portfolio-popup .pp-next:hover {
 	opacity: 1;
+	box-shadow: var(--inner-shadow);
 }
 .portfolio-popup .pp-prev{
 	left: 35px;
@@ -1098,6 +1159,7 @@ img{
 .portfolio-popup .pp-next{
 	right: 35px;
 }
+
 .contact-section{
 	padding: 80px 0 80px;
 	min-height: 50vh;
@@ -1129,6 +1191,7 @@ img{
 	text-transform: capitalize;
 	word-break: break-word;
 }
+.contact-section .contect-me-items-inner a,
 .contact-section .contect-me-items-inner p{
 	font-size: 16px;
 	color: var(--skin-color);	
@@ -1247,12 +1310,15 @@ img{
 	position: fixed;
 	text-decoration: none;
 	text-align: center;
-	font-size: 35px;
-	line-height: 35px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
 	right: 15px;
-	bottom: -30px;
+	bottom: 20px;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	color: var(--text-black-600);
 	transition: all 0.3s ease;
@@ -1266,9 +1332,7 @@ img{
 }
 .top i{
 	color:var(--skin-color);
-	padding: 0.5rem;
-	font-size: 36px;
-	line-height: 100px;
+	font-size: 27px;
 }
 .style-switcher{
 	  position: fixed;
@@ -1667,6 +1731,7 @@ img {
 .testimonials-section .slick-slider .slick-prev::before {
     font-family: FontAwesome;
     color: var(--skin-color);
+	font-size: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1675,6 +1740,7 @@ img {
 
 .testimonials-section .slick-slider .slick-next::before {
     font-family: FontAwesome;
+	font-size: 2.5rem;
     color: var(--skin-color);
     display: flex;
     align-items: center;
@@ -1683,12 +1749,12 @@ img {
 }
 
 .testimonials-section .slick-slider .slick-prev {
-    left: -35px;
+    left: -10px;
     font-size: 0; 
 }
 
 .testimonials-section .slick-slider .slick-next {
-    right: -35px;
+    right: -10px;
     font-size: 0; 
 }
 

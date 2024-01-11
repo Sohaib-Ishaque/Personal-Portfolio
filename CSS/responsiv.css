@@ -244,6 +244,20 @@
 	.list.active .link .icons {
 		font-size: .8em;
 	}
+
+	.testimonials-section .item-wrapper {
+		overflow: hidden;
+	}
+	.testimonials-section .slick-dots {
+		position: absolute;
+		bottom: 8px;
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		text-align: center;
+	}
 }
 
 @media(max-width: 574px) {

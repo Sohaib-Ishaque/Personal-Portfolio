@@ -2251,7 +2251,6 @@ img {
 	display: -ms-flexbox;
 	display: flex;
 	gap: 1rem;
-	overflow: hidden;
 }
 
 .testimonials-section .item-wrapper .items {

@@ -395,7 +395,7 @@ img {
 .home-section .home-text h2,
 .home-section .home-text span {
 	color: var(--text-black-900);
-	font-size: 55px;
+	font-size: 45px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 	margin: 0;
@@ -433,7 +433,7 @@ img {
 	100% {
 		background-position: 1000px 0;
 	}
-}
+} 
 
 .home-section .home-text .btn {
 	margin-top: 30px;
@@ -456,7 +456,7 @@ img {
 }
 
 .about-section {
-	padding: 80px 0 0;
+	padding: 100px 0 0;
 	min-height: 50vh;
 }
 
@@ -917,7 +917,7 @@ img {
 }
 
 .services-section {
-	padding: 80px 0 80px;
+	padding: 100px 0 100px;
 	min-height: 50vh;
 }
 
@@ -1014,7 +1014,7 @@ img {
 }
 
 .portfolio-section {
-	padding: 80px 0 80px;
+	padding: 100px 0 100px;
 	min-height: 50vh;
 }
 
@@ -1052,8 +1052,8 @@ img {
 
 .portfolio-section .filter-items .count {
 	position: absolute;
-	right: -1.6rem;
-	top: -1.6rem;
+	right: -1.3rem;
+	top: -1.3rem;
 	border-radius: 30px;
 	/* border-bottom-left-radius: 0; */
 	width: 30px;
@@ -1596,7 +1596,7 @@ img {
 }
 
 .contact-section {
-	padding: 80px 0 80px;
+	padding: 100px 0 100px;
 	min-height: 50vh;
 }
 
@@ -2021,12 +2021,12 @@ img {
 }
 
 .testinomials-section {
-	padding: 80px 0 0;
+	padding: 100px 0 0;
 	min-height: 50vh;
 }
 
 .blogs-section {
-	padding: 80px 0 80px;
+	padding: 100px 0 100px;
 	min-height: 100vh;
 }
 
@@ -2242,7 +2242,7 @@ img {
 }
 
 .testimonials-section {
-	padding: 80px 0 80px;
+	padding: 100px 0 100px;
 	min-height: 50vh;
 }
 
@@ -2658,7 +2658,7 @@ a {
 	}
 
 	.list.active .link .icons {
-		font-size: 1.3em;
+		font-size: 1.1em;
 		z-index: 999;
 		-webkit-transform: translateY(-17px);
 		-ms-transform: translateY(-17px);
@@ -2673,19 +2673,17 @@ a {
 		transform: translateY(-4px);
 		background: var(--progress-color);
 		padding: 3px 8px;
-		border-radius: 0px;
+		border-radius: 10px;
 		font-weight: bold;
 	}
 
 	.list.active .link .indicator {
 		background: var(--progress-color);
-		width: 30px;
-		height: 30px;
+		width: 40px;
+		height: 40px;
 		position: absolute;
-		top: -17px;
-		-webkit-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		transform: rotate(45deg);
+		top: -16px;
+		border-radius: 50%;
 		-webkit-transition: 0.5s;
 		-o-transition: 0.5s;
 		transition: 0.5s;
@@ -2705,9 +2703,9 @@ a {
 	}
 
 	.list.active .link .text {
-		-webkit-transform: translateY(2px);
-		-ms-transform: translateY(2px);
-		transform: translateY(2px);
+		-webkit-transform: translateY(-6px);
+		-ms-transform: translateY(-6px);
+		transform: translateY(-6px);
 	}
 
 	.navbar {
